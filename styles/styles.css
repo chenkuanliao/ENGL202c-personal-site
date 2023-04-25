@@ -9,7 +9,7 @@
   font-family: "Roboto", sans-serif;
 }
 
-body::before {
+/* body::before {
   content: "";
   position: fixed;
   top: 0;
@@ -18,7 +18,7 @@ body::before {
   height: 100%;
   background: linear-gradient(#f00, #f0f);
   clip-path: circle(30% at bottom);
-}
+} */
 
 /**navbar**/
 .nav-wrapper {
@@ -78,36 +78,6 @@ hr {
 
 /*main*/
 /* home page*/
-.card-title-wrapper {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  margin-top: 50px;
-}
-
-.card-title-wrapper .card-title-background {
-  position: relative;
-  width: 300px;
-  height: 50px;
-  margin-left: 100px;
-  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
-  border-radius: 15px;
-  background: #8b008b;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.card-title-wrapper > .card-title-background > .card-title {
-  padding: 20px;
-  text-align: center;
-  background-color: transparent;
-}
-
-.card-title-wrapper .card-title h2 {
-  color: white;
-  font-size: 3em;
-  background-color: transparent;
-}
 
 .content {
   display: grid;
@@ -119,7 +89,7 @@ hr {
 .content .card {
   position: relative;
   width: 450px;
-  height: 400px;
+  height: 570px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
   border-radius: 15px;
@@ -150,7 +120,7 @@ hr {
   position: absolute;
   top: -80px;
   right: 10px;
-  font-size: 8em;
+  font-size: 6em;
   background-color: transparent;
   color: rgba(0, 0, 0, 0.2);
   pointer-events: none;
@@ -187,14 +157,80 @@ hr {
   box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.5);
 }
 
+.content > .card > .card-front h5 {
+  background-color: transparent;
+  /* position: relative; */
+  color: white;
+  font-size: 20px;
+  /* margin-top: -30px; */
+  opacity: 60%;
+  position: absolute;
+  bottom: 10px;
+}
+
 .card-front {
   background-color: transparent;
   display: flex;
+  flex-direction: column;
   margin: 60px;
   position: absolute;
   transform: translateY(0px);
   opacity: 1;
   transition: 1s;
+  width: 400px;
+  height: 520px;
+  align-items: center;
+}
+
+.card-front h2{
+  font-size: 30px;
+  background-color: transparent;
+  color: white;
+  width: 400px;
+  text-align: center;
+}
+
+.card-front img{
+  border-radius: 8px;
+}
+
+.chatterBoxImg{
+  height: 250px;
+  width: 250px;
+  margin-top: 10px;
+  margin-bottom: -40px;
+}
+
+.terminalSiteImg{
+  height: 200px;
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.faceImg{
+  height: 200px;
+  width: 350px;
+  margin-top: 20px;
+  margin-bottom: 5px;
+}
+
+.card-front p{
+  font-size: 15px;
+  background-color: transparent;
+  color: white;
+  width: 400px;
+  text-align: center;
+  margin-top: 60px;
+}
+
+.card-front h4{
+  font-size: 15px;
+  background-color: transparent;
+  color: white;
+  width: 380px;
+  text-align: center;
+  margin: 10px;
 }
 
 .content .card:hover .card-front {
@@ -202,11 +238,11 @@ hr {
   opacity: 0;
 }
 
-.card-front img {
+/* .card-front img {
   width: 100%;
   height: 100%;
   background-color: transparent;
-}
+} */
 
 .css-picture-setting {
   margin: 105px;
@@ -227,7 +263,7 @@ hr {
 
 .content-about-page .card-about {
   position: relative;
-  width: 900px;
+  width: 1100px;
   height: 400px;
   margin: 30px;
   box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
@@ -242,6 +278,29 @@ hr {
   transform-style: preserve-3d;
   transform: perspective(700px) rotateY(0deg);
 }
+
+.content-about-page .card-about-half {
+  position: relative;
+  width: 550px;
+  height: 300px;
+  margin: 30px;
+  box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+  border-radius: 15px;
+  background: rgba(225, 225, 225, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-top: 1px solid rgba(225, 225, 225, 0.5);
+  border-left: 1px solid rgba(225, 225, 225, 0.5);
+  backdrop-filter: blur(5px);
+  transform-style: preserve-3d;
+  transform: perspective(700px) rotateY(0deg);
+  margin-left: 5px;
+  margin-right: 60px;
+  margin-top: 70px;
+}
+
+.card-content-about-half
 
 .two-column-wrapper {
   display: flex;
@@ -332,4 +391,97 @@ hr {
 .card-about .face .card-content-about {
   transform: perspective(700px) translateZ(10px);
   backface-visibility: hidden;
+}
+
+.card-front-p {
+  /* position:absolute;  */
+  /* bottom: 10px; */
+}
+
+
+.content-about-page .card-about .card-content-about .card-container{
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  align-items: center;
+}
+
+.content-about-page .card-about-half .card-content-about .card-container{
+  display: flex;
+  flex-direction: row;
+  background-color: transparent;
+  align-items: center;
+}
+
+.about-img{
+  width: 300px;
+  height: 25  0px;
+  border-radius: 15px;
+}
+
+.content-about-page .card-about .card-content-about p{
+  color: white;
+  margin: 30px;
+  width: 600px;
+}
+
+.content-about-page .card-about-half .card-content-about p{
+  color: white;
+  margin: 20px;
+  font-size: 20px;
+}
+
+.row{
+  display: flex;
+  flex-direction: row;
+}
+
+.column{
+  display: flex;
+  flex-direction: column;
+  background-color: transparent;
+}
+
+.column h2{
+  color: white;
+  font-size: 40px;
+  background-color: transparent;
+}
+
+.column h3{
+  color: white;
+  font-size: 20px;
+  opacity: 40%;
+  background-color: transparent;
+}
+
+.experience-p{
+  /* margin-left: -20px; */
+  background-color: transparent;
+  width: 350px;
+  font-size: 15px;
+  color: white;
+}
+
+.experience-p h4{
+  background-color: transparent;
+  margin: 10px;
+}
+
+.content-about-page h2{
+  color: white;
+  font-size: 30px;
+}
+
+.about-row-container{
+  display:flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.about-column-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
